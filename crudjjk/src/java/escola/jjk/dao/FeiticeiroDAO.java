@@ -8,7 +8,10 @@ import escola.jjk.connection.ConnectionFactory;
 import escola.jjk.model.Feiticeiro;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -20,8 +23,8 @@ public class FeiticeiroDAO {
     /*
     *CRUD
     
-    *C.reate
-    *R.ead
+    *C.reate  - ok - insert
+    *R.ead - ok - select
     *U.pdate
     *D.elete
     
@@ -32,6 +35,8 @@ public class FeiticeiroDAO {
     
     /*
     GLOSSÁRIO
+    
+    DAO - Data Access Object
     
     PreparedStatement - o driver JDBC envia a consulta SQL sem os parâmetros 
     para ser compilada pelo servidor de banco de dados. Ao executar a instrução 
@@ -45,7 +50,7 @@ public class FeiticeiroDAO {
     */
     
     //Inserir valores no banco
-    public void save(Feiticeiro feiticeiro) throws ClassNotFoundException, SQLException{
+    public void create(Feiticeiro feiticeiro) throws ClassNotFoundException, SQLException{
         
         String sql = "INSERT INTO feiticeiros(nome,grau,tecnica_inata,periodo_escolar) values(?,?,?,?)";
         
@@ -83,5 +88,105 @@ public class FeiticeiroDAO {
             }
         }
     }
+    
+    public void update(Feiticeiro feiticeiro){
+        String sql = "UPDATE feiticeiros SET nome = ?, grau = ?, tecnica_inata = ?, periodo_escolar  = ? WHERE rgf =?";
+        
+        
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        
+        try{
+            //criar uma conexão com o BD
+            conn = ConnectionFactory.createConnectionToMySQL();
+            //Cria uma PreparedStatement para executar uma query
+            pstm = conn.prepareStatement(sql);
+            //adicionar os valores para atualizar
+            pstm.setString(1,feiticeiro.getNome());
+            pstm.setString(2,feiticeiro.getGrau());
+            pstm.setString(3,feiticeiro.getTecnica_inata());
+            pstm.setString(4,feiticeiro.getPeriodo_escolar());
+            pstm.setInt(5, feiticeiro.getRgf());
+            
+            //Executar a query
+            pstm.execute();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            //Fechar as conexões
+            try{
+                if(pstm!=null){
+                    pstm.close();
+                }
+                if(conn!=null){
+                    conn.close();
+                }    
+            }catch(Exception e){
+                e.printStackTrace();
+            
+            }
+        }
+    }
+    
+    public List<Feiticeiro> read(){
+        
+        String sql = "SELECT * FROM feiticeiros";
+        
+        List<Feiticeiro> feiticeiros = new ArrayList<Feiticeiro>();
+        
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        //Classe que vai recuperar os dados do BD ***SELECT***
+        ResultSet rset = null;
+        
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            
+            pstm = conn.prepareStatement(sql);
+            
+            rset = pstm.executeQuery();
+            
+            
+            while(rset.next()){
+                
+                Feiticeiro feiticeiro = new Feiticeiro();
+                
+                //recuperar id
+                feiticeiro.setRgf(rset.getInt("rgf"));
+                //recuperar nome
+                feiticeiro.setNome(rset.getString("nome"));
+                //recuperar grau
+                feiticeiro.setGrau(rset.getString("grau"));
+                //recuperar tecnica
+                feiticeiro.setTecnica_inata(rset.getString("tecnica_inata"));
+                //recuperar periodo_escolar
+                feiticeiro.setPeriodo_escolar(rset.getString("periodo_escolar"));
+                
+                
+                feiticeiros.add(feiticeiro);
+                
+            }
+                 
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            try{
+                if(pstm!=null){
+                    pstm.close();
+                }
+                if(conn!=null){
+                    conn.close();
+                }
+                if(rset!=null){
+                    conn.close();
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        return feiticeiros;
+    }
+    
     
 }

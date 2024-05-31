@@ -5,11 +5,33 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Escola Técnica de Jujutsu de Tokyo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <header>
+            <h1>Escola Técnica de Jujutsu de Tokyo</h1>
+        </header>
+        <main>
+            
+            <h2>Formulário de Feiticeiros</h2>
+            
+            <form action="Aplicacao" method="POST">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" maxlength="269" required><br>
+                <label for="grau">Grau:</label><br>
+                <input type="text" id="grau" name="grau" maxlength="269" required><br>
+                <label for="tecnica_inata">Técnica Inata:</label><br>
+                <input type="text" id="tecnica_inata" name="tecnica_inata" maxlength="269" required><br>
+                <label for="periodo_escolar">Período Escolar:</label><br>
+                <input type="text" id="periodo_escolar" name="periodo_escolar" maxlength="269" required><br>
+                <input type="submit" value="Enviar">
+            </form>
+            
+        </main>
+        <footer>
+            
+        </footer>
     </body>
 </html>

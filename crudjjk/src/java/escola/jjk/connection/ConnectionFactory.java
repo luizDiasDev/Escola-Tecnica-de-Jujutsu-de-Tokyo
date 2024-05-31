@@ -64,12 +64,12 @@ public class ConnectionFactory {
     public static void main(String[] args) throws ClassNotFoundException, SQLException{
         
         //recuperar uma conexão com o banco de dados
-        Connection con = createConnectionToMySQL();
+        Connection conn = createConnectionToMySQL();
         
         //Testar se a conexão é nula
-        if(con!=null){
+        if(conn!=null){
             System.out.println("Conexão obtida com sucesso!");
-            con.close();
+            conn.close();
         }
         
     }
