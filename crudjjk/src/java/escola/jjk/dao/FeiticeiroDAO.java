@@ -90,6 +90,7 @@ public class FeiticeiroDAO {
     }
     
     public void update(Feiticeiro feiticeiro){
+        
         String sql = "UPDATE feiticeiros SET nome = ?, grau = ?, tecnica_inata = ?, periodo_escolar  = ? WHERE rgf =?";
         
         
@@ -186,6 +187,43 @@ public class FeiticeiroDAO {
             }
         }
         return feiticeiros;
+    }
+    
+    public void delete(Feiticeiro feiticeiro){
+        
+        String sql = "DELETE FROM feiticeiros WHERE rgf = ?";
+        
+        
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        
+        try{
+            //criar uma conexão com o BD
+            conn = ConnectionFactory.createConnectionToMySQL();
+            //Cria uma PreparedStatement para executar uma query
+            pstm = conn.prepareStatement(sql);
+            //informar o valor do ID que será apagado
+            pstm.setInt(1, feiticeiro.getRgf());
+            
+            //Executar a query
+            pstm.execute();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            //Fechar as conexões
+            try{
+                if(pstm!=null){
+                    pstm.close();
+                }
+                if(conn!=null){
+                    conn.close();
+                }    
+            }catch(Exception e){
+                e.printStackTrace();
+            
+            }
+        }
     }
     
     

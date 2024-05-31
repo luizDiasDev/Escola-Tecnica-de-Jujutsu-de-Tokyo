@@ -8,26 +8,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Escola Técnica de Jujutsu de Tokyo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style_form_page.css">
     </head>
-    <body>
+    <body id="body">
         <header>
-            <h1>Escola Técnica de Jujutsu de Tokyo</h1>
         </header>
         <main>
+               
             
-            <h2>Formulário de Feiticeiros</h2>
+
             
-            <form action="Aplicacao" method="POST">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" maxlength="269" required><br>
-                <label for="grau">Grau:</label><br>
-                <input type="text" id="grau" name="grau" maxlength="269" required><br>
-                <label for="tecnica_inata">Técnica Inata:</label><br>
-                <input type="text" id="tecnica_inata" name="tecnica_inata" maxlength="269" required><br>
-                <label for="periodo_escolar">Período Escolar:</label><br>
-                <input type="text" id="periodo_escolar" name="periodo_escolar" maxlength="269" required><br>
-                <input type="submit" value="Enviar">
-            </form>
+            <section id="container">
+                <img src="https://www.citypng.com/public/uploads/small/11660427676zv9kgcmolil5tpntxmnhtxkmqj5lp8d6ucssv4vgz4acpajk2vdm7oc4npwpjrnjx4u6czobealec1kmiocbedhdut9521g8zaoi.png" alt="logo" id="logo">
+                <h1>Formulário de Feiticeiros</h1>
+                <form id="feiticeirosform" method="POST">
+                    <input id="rgf" type="number" name="rgf" placeholder="RGF:" autocomplete="off"><br>
+                    <input id="nome" type="text" name="nome" placeholder="Nome:" maxlength="269" autocomplete="off" required><br>
+                     <input id="grau" type="text" name="grau" placeholder="Grau:" maxlength="269" autocomplete="off" required><br>
+                    <input id="tecnica_inata" type="text" name="tecnica_inata" placeholder="Técnica Inata:" maxlength="269" autocomplete="off" required><br>
+                    <input id="periodo_escolar" type="text" name="periodo_escolar" placeholder="Período Escolar:" maxlength="269" autocomplete="off" required><br>
+                    <input class="submit" type="submit" value="Enviar" onclick="mudarAction('Create')">
+                    <input class="submit" type="submit" value="Atualizar" onclick="mudarAction('Update')">
+                    <input class="submit" type="submit" value="Deletar" onclick="mudarAction('Delete')">
+                </form>
+                <br>
+                <form action="Read" method="POST">
+                   <input class="submit" type="submit" value="Exibir">
+               </form>
+            </section>
+
+            <script>
+                //Pega o valor do "onclick" e transforma na pagina desejada, apartir da função mudarAction no js
+                function mudarAction(acao) {
+                    document.getElementById('feiticeirosform').action = acao;
+                }
+            </script>
+            
+            
+            
             
         </main>
         <footer>

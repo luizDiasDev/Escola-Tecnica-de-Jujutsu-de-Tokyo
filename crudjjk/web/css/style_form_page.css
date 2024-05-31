@@ -1,0 +1,113 @@
+/* Style geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #323232;
+    border: none;
+}
+
+html,body{
+    background-color: #242423;
+}
+
+#body{
+    width: 100%;
+    background-image: url(https://i.ibb.co/zR3cHYR/5721584012f7.png);
+    background-size: 150px;
+    background-repeat: repeat;
+    z-index: 0;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea:focus, input:focus{
+    outline:none;
+}
+
+a, p, label{
+    font-size: .8rem;
+}
+
+a:hover{
+    color: #085588;
+}
+
+/*Container*/
+
+#container{
+    background-color: #FFF;
+    width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vh 5vw;
+    margin-top: 10vh;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Formulario */
+
+form{
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+}
+
+label,input {
+    display: block;
+    width: 100%;
+    text-align: left;
+} 
+
+label{
+    font-weight: bold;
+}
+
+input {
+    border-bottom: 2px solid #323232;
+    padding: 5%;
+    font-size: 1rem;
+    margin-bottom: 2vh;
+} 
+
+input:focus {
+    border-bottom: 2px solid #085588;
+} 
+
+.submit{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 1%;
+    border-radius: 20px;
+    color:rgb(255, 255, 255);
+    background-color: #242423;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: #031b2a;
+    transition: .5s;
+}
+
+#logo{
+    width: 50%;
+    margin-bottom: 2vh;
+}
+
+#back{
+    width: 5%;
+    cursor: pointer;
+    transform: translate(93vw, 11vh);
+}
+
+#exit{
+    width: 5%;
+    cursor: pointer;
+    transform: translate(80vw, 11vh);
+}
