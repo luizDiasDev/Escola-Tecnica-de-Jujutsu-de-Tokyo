@@ -48,13 +48,15 @@ public class Read extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Resultado Banco</title>");            
+            out.println("<title>Resultado Banco</title>");
+             out.println("<link rel='stylesheet' type='text/css' href='css/style_table.css'>");
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Resultado Banco</h1>");
+            out.println("<body id='body'>");
+            //out.println("<h1>Resultado Banco</h1>");
             //visualização dos registros do BD TODOS Em forma de tabela
-            out.println("<table>");
-            out.println("<tr><th>RGF</th><th>Nome</th><th>Grau</th><th>Técnica Inata</th><th>Ano Escola</th></tr>");
+            out.println("<section id='container'>");
+            out.println("<table cellspacing='0'>");
+            out.println("<tr><th>RGF</th><th>Nome</th><th>Grau</th><th>Técnica Inata</th><th>Ano Escola</th><th>Excluir</th><th>Editar</th></tr>");
             for(Feiticeiro f : feiticeiroDAO.read()){
                 out.println("<tr>");
                 out.println("<td>" + f.getRgf() + "</td>");
@@ -68,6 +70,7 @@ public class Read extends HttpServlet {
             }
             out.println("</table>");
             out.println("<br><a href='/crudjjk'><button>Voltar</button></a>");
+            out.println("</section>");
             out.println("</body>");
             out.println("</html>");
         }

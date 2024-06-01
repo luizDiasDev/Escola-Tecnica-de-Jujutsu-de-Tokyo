@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+html, body{
+    background-color: #242423;
+}
+img{
+    width: 300px; 
+    height: 250px
+}
+
+#body{
+    width: 100%;
+    background-image: url(https://i.ibb.co/zR3cHYR/5721584012f7.png);
+    background-size: 150px;
+    background-repeat: repeat;
+    z-index: 0;
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.cards{
+  width: 95vw;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+.cards h2.header{
+  font-size: 40px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+.options{
+  display: flex;
+  align-items: center;
+}
+.title{
+  margin-bottom: 10vh;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border: 2.5px solid black;
+  border-radius: 50px;
+  transition: all .3s ease;
+  background-color: white;
+}
+.content .fab{
+  font-size: 150px;
+  margin: 16px 0;
+  margin-bottom: 10vh;
+}
+.content > *{
+  flex: 1 1 100%;
+}
+.content:hover{
+  color: white;
+}
+.content:hover img{
+    filter: invert(200%);
+}
+.content:hover a{
+  border-color: white;
+  background: white;
+}
+.content-all:hover{
+  border-color: #242423;
+  background: #242423;
+  transform: translateY(-30px);
+  transition-duration:0.2s ease;
+  box-shadow: 2px 20px 25px rgb(214, 214, 214);
+}
+.content-all:hover a{
+  color: #F39322;
+}
+.content h2{
+  font-size: 30px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.content p{
+  font-size: 17px;
+  font-family: 'Poppins',sans-serif;
+}
+.content a{
+  margin: 22px 0;
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 0;
+  border-radius: 25px;
+  transition: .3s ease;
+}
+.content a:hover{
+  border-radius: 4px;
+  color: #242423;
+}

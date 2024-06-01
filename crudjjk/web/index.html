@@ -1,55 +1,54 @@
+
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>Escola Técnica de Jujutsu de Tokyo</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style_form_page.css">
-    </head>
-    <body id="body">
-        <header>
-        </header>
-        <main>
-               
-            
-
-            
-            <section id="container">
-                <img src="https://www.citypng.com/public/uploads/small/11660427676zv9kgcmolil5tpntxmnhtxkmqj5lp8d6ucssv4vgz4acpajk2vdm7oc4npwpjrnjx4u6czobealec1kmiocbedhdut9521g8zaoi.png" alt="logo" id="logo">
-                <h1>Formulário de Feiticeiros</h1>
-                <form id="feiticeirosform" method="POST">
-                    <input id="rgf" type="number" name="rgf" placeholder="RGF:" autocomplete="off"><br>
-                    <input id="nome" type="text" name="nome" placeholder="Nome:" maxlength="269" autocomplete="off" required><br>
-                     <input id="grau" type="text" name="grau" placeholder="Grau:" maxlength="269" autocomplete="off" required><br>
-                    <input id="tecnica_inata" type="text" name="tecnica_inata" placeholder="Técnica Inata:" maxlength="269" autocomplete="off" required><br>
-                    <input id="periodo_escolar" type="text" name="periodo_escolar" placeholder="Período Escolar:" maxlength="269" autocomplete="off" required><br>
-                    <input class="submit" type="submit" value="Enviar" onclick="mudarAction('Create')">
-                    <input class="submit" type="submit" value="Atualizar" onclick="mudarAction('Update')">
-                    <input class="submit" type="submit" value="Deletar" onclick="mudarAction('Delete')">
-                </form>
-                <br>
-                <form action="Read" method="POST">
-                   <input class="submit" type="submit" value="Exibir">
-               </form>
+<html lang="pt-br">
+    <link rel="stylesheet" href="css/style_cards.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/e2a21d01bc.js" crossorigin="anonymous"></script>
+   <body id="body">
+      <section class="cards">
+         <h2 class="header">
+            Selecione:
+         </h2>
+         <section class="options">
+            <section class="content content-all"> 
+               <section class="title">
+                  <h2>
+                     Create
+                  </h2>
+               </section>
+               <section class="fab"><img src="images/wolf.png" alt="logo"></section>
+               <a href="create.html">Adicionar</a>
             </section>
-
-            <script>
-                //Pega o valor do "onclick" e transforma na pagina desejada, apartir da função mudarAction no js
-                function mudarAction(acao) {
-                    document.getElementById('feiticeirosform').action = acao;
-                }
-            </script>
-            
-            
-            
-            
-        </main>
-        <footer>
-            
-        </footer>
-    </body>
+            <section class="content content-all">
+               <section class="title">
+                  <h2>
+                     Read
+                  </h2>
+               </section>
+               <section class="fab"><img src="images/eye.png" alt="logo"></section>
+               <a href="Read">Visualizar</a>
+            </section>
+            <section class="content content-all">
+               <section class="title">
+                  <h2>
+                     Update
+                  </h2>
+               </section>
+               <section class="fab"><img src="images/wheel.png" alt="logo"></section>
+               <a href="update.html">Editar</a>
+            </section>
+            <section class="content content-all"> 
+               <section class="title">
+                  <h2>
+                     Delete
+                  </h2>
+               </section>
+               <section class="fab"><img src="images/cube.png" alt="logo"></section>
+               <a href="delete.html">Excluir</a>
+            </section>
+         </section>
+      </section>
+   </body>
 </html>
+

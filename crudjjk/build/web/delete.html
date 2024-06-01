@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Escola Técnica de Jujutsu de Tokyo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style_form_page.css">
+    </head>
+    <body id="body">
+        <header>
+        </header>
+        <main>
+               
+            
+            
+            
+
+            
+            <section id="container">
+                <img src="https://www.citypng.com/public/uploads/small/11660427676zv9kgcmolil5tpntxmnhtxkmqj5lp8d6ucssv4vgz4acpajk2vdm7oc4npwpjrnjx4u6czobealec1kmiocbedhdut9521g8zaoi.png" alt="logo" id="logo">
+                <h1>Formulário de Feiticeiros</h1>
+                <form id="feiticeirosform" method="POST">
+                    <input id="rgf" type="number" name="rgf" placeholder="RGF:" autocomplete="off" required><br>
+                    <input class="submit" type="submit" value="Deletar" onclick="mudarAction('Delete')">
+                </form>
+                <br>
+                <form action="/crudjjk" method="POST">
+                   <input class="submit" type="submit" value="Voltar">
+               </form>
+            </section>
+
+            <script>
+                //Pega o valor do "onclick" e transforma na pagina desejada, apartir da função mudarAction no js
+                function mudarAction(acao) {
+                    document.getElementById('feiticeirosform').action = acao;
+                }
+            </script>
+            
+            
+            
+            
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

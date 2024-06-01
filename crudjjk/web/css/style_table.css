@@ -1,0 +1,218 @@
+/* Style geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #323232;
+}
+
+html, body{
+    background-color: #242423;
+}
+
+#body{
+    width: 100%;
+    background-image: url(https://i.ibb.co/zR3cHYR/5721584012f7.png);
+    background-size: 150px;
+    background-repeat: repeat;
+    z-index: 0;
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea:focus, input:focus{
+    outline:none;
+}
+
+a, p, label{
+    font-size: .8rem;
+}
+
+a:hover{
+    color: #085588;
+}
+
+/* Formulario */
+
+#selecionar input{
+    width: 33.33333%;
+    text-align: center;
+    padding: 5%;
+    font-size: 1rem;
+    margin-bottom: 2vh;
+    border: none;
+} 
+
+#selecionar input:hover{
+    color: #FFF;
+    background-color: #085588;
+    transition: .5s;
+}
+
+#email{
+    float:left;
+}
+
+#tel{
+    float:left;
+}
+
+#end{
+    float:right;
+}
+
+#selecionara input{
+    width: 33.33333%;
+    text-align: center;
+    padding: 5%;
+    font-size: 1rem;
+    margin-bottom: 2vh;
+    border: none;
+} 
+
+#selecionara input:hover{
+    color: #FFF;
+    background-color: #085588;
+    transition: .5s;
+}
+
+#cad{
+    float:left;
+}
+
+#mod{
+    float:left;
+}
+
+#exc{
+    float:right;
+}
+
+
+#filtro{
+    margin-left: 2%;
+}
+
+#filtro #filtrar{
+    height: 5vh;
+    width: 20vw;
+    font-size: .8rem;
+    margin-bottom: 2vh;
+    border: none;
+} 
+
+#filtrars{
+    height: 5vh;
+    width: 20vw;
+    font-size: .8rem;
+    margin-bottom: 2vh;
+    float:left;
+    text-align: left;
+}
+
+#filtrar:hover{
+    color: #FFF;
+    background-color: #085588;
+    transition: .5s;
+}
+
+#filtrar{
+    float:left;
+}
+
+#exit{
+    width: 5%;
+    cursor: pointer;
+    transform: translate(93vw, 10vh);
+}
+#ex , #alt{
+    width: 2vw;
+    cursor: pointer;
+}
+
+/* Tabela */
+
+table {
+    width: 100%;
+    text-align: center;
+    overflow:hidden;
+    border-collapse:separate;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+  }
+  
+th, td {
+    text-align: center;
+    padding: 8px;
+    background-color: #F0F0F0;
+  }
+  
+tr:nth-child(even){background-color: #f2f2f2}
+  
+th {
+    background-color: #242423ab;
+    color: white;
+  }
+
+
+#container{
+    background-color: #F0F0F0;
+    border: solid #ccc 5px;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    margin-top: 10vh;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* Formulario */
+
+#container form{
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+}
+
+#container label,input {
+    display: block;
+    width: 100%;
+    text-align: left;
+} 
+
+#container label{
+    font-weight: bold;
+}
+
+#container input {
+    border-bottom: 2px solid #323232;
+    padding: 5%;
+    font-size: 1rem;
+    margin-bottom: 2vh;
+} 
+
+#container input:focus {
+    border-bottom: 2px solid #085588;
+} 
+
+#enviar{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 1%;
+    border-radius: 20px;
+    color:rgb(255, 255, 255);
+    background-color: #085588;
+    cursor: pointer;
+}
+
+#enviar:hover{
+    background-color: #031b2a;
+    transition: .5s;
+}
