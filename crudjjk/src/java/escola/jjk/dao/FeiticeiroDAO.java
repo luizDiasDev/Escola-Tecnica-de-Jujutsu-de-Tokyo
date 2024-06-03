@@ -25,8 +25,8 @@ public class FeiticeiroDAO {
     
     *C.reate  - ok - insert
     *R.ead - ok - select
-    *U.pdate
-    *D.elete
+    *U.pdate ok
+    *D.elete ok
     
     */
     

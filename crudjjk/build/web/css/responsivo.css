@@ -1,0 +1,50 @@
+@media(max-width: 1200px){
+    body{
+        background-color: rgb(87, 61, 110);
+        overflow: auto;
+    }
+    .fundo-video{
+        display: none;
+    }
+
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        gap: 30px;
+    }
+    .container .imagem-personagem{
+        width: 50%;
+    }
+    .container .informacoes{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container .descricao{
+        color: #fff;
+        text-align: center;
+    }
+
+    .container .botao{
+        background-color:blueviolet;
+    }
+
+    .container .imagem-personagem{
+        position: relative;
+        right: 35px;
+    }
+}
+
+@media(max-width: 500px){
+  .cabecalho{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+ }
+
+  .container{
+    max-width: 75%;
+  }
+}

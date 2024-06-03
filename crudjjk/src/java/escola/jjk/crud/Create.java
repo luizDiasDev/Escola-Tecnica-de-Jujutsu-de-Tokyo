@@ -61,7 +61,7 @@ public class Create extends HttpServlet {
         feiticeiroDAO.create(feiticeiro);
         
         //Envia para pagina no lado do cliente
-        response.sendRedirect("/crudjjk");
+        response.sendRedirect("/crudjjk/select.html");
         
         /* Enviaria os dados direto para o servidor, nessse caso não faz sentido, a pagina não mudaria
         

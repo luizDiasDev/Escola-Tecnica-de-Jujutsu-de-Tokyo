@@ -1,54 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <link rel="stylesheet" href="css/style_cards.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://kit.fontawesome.com/e2a21d01bc.js" crossorigin="anonymous"></script>
-   <body id="body">
-      <section class="cards">
-         <h2 class="header">
-            Selecione:
-         </h2>
-         <section class="options">
-            <section class="content content-all"> 
-               <section class="title">
-                  <h2>
-                     Create
-                  </h2>
-               </section>
-               <section class="fab"><img src="images/wolf.png" alt="logo"></section>
-               <a href="create.html">Adicionar</a>
-            </section>
-            <section class="content content-all">
-               <section class="title">
-                  <h2>
-                     Read
-                  </h2>
-               </section>
-               <section class="fab"><img src="images/eye.png" alt="logo"></section>
-               <a href="Read">Visualizar</a>
-            </section>
-            <section class="content content-all">
-               <section class="title">
-                  <h2>
-                     Update
-                  </h2>
-               </section>
-               <section class="fab"><img src="images/wheel.png" alt="logo"></section>
-               <a href="update.html">Editar</a>
-            </section>
-            <section class="content content-all"> 
-               <section class="title">
-                  <h2>
-                     Delete
-                  </h2>
-               </section>
-               <section class="fab"><img src="images/cube.png" alt="logo"></section>
-               <a href="delete.html">Excluir</a>
-            </section>
-         </section>
-      </section>
-   </body>
-</html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Técnica de Jujutsu de Tokyo</title>
+    <link rel="icon" type="image/x-icon" href="https://www.citypng.com/public/uploads/small/11660427676zv9kgcmolil5tpntxmnhtxkmqj5lp8d6ucssv4vgz4acpajk2vdm7oc4npwpjrnjx4u6czobealec1kmiocbedhdut9521g8zaoi.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  
+</head>
+
+<body>
+    <div class="fundo-video">
+        <video class="video" loop autoplay muted>
+            <source src="videos/Satoro Gojo Usa o Vazio Roxo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="cabecalho">
+        <a href="index.html"><img src="images/Jujutsu Kaisen High Red Logo PNG Image.png" alt="Simbolo de Jujutsu"
+                class="icone"></a>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</li></a>
+                <li><a href="index.html">Voltar</li></a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <div class="informacoes">
+            <img src="images/logo.png" alt="Logo de jujutsu" class="imagem-titulo">
+            <p class="descricao">A história de Jujutsu Kaisen se passa em um universo em que a concentração de
+                sentimentos negativos dá origem a Maldições,monstros perigosos, que pessoas comuns não conseguem
+                enxergar. </p>
+
+            <a href="select.html"><button class="botao">Formulário</button></a>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<div class="imagemconjunto">
+			<img src="images/gojo.png" alt=""
+				class="img-rand">
+			<img src="images/itadori.png" alt=""
+				class="img-rand">
+            <img src="images/yuuta.png" alt=""
+                class="img-rand">
+            <img src="images/maki.png" alt=""
+                class="img-rand">
+            
+		</div>
+        <script type="text/javascript">
+            var index = 0;
+
+            function changeImage(){
+
+               var rand = Math.floor (Math.random () * 4)
+               jQuery('.img-rand').eq(index).fadeIn(function(){
+                  jQuery('.img-rand').delay(2000).eq(index).fadeOut(function(){
+                     index++;
+                     // aqui o "1" é se vc possui 2 imagens
+                     if (index > 3) index = 0;
+                     changeImage();
+                  });
+               });
+               
+            }
+            changeImage();
+        </script>
+    </main>
+</body>
+
+</html>

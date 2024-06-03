@@ -6,13 +6,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>Escola Técnica de Jujutsu de Tokyo</title>
+        <link rel="icon" type="image/x-icon" href="https://www.citypng.com/public/uploads/small/11660427676zv9kgcmolil5tpntxmnhtxkmqj5lp8d6ucssv4vgz4acpajk2vdm7oc4npwpjrnjx4u6czobealec1kmiocbedhdut9521g8zaoi.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style_form_page.css">
+        <link rel="stylesheet" type="text/css" href="css/style_menu.css">
+         <link rel="stylesheet" href="css/responsivo.css">
+        <link rel="stylesheet" href="css/variaveis.css">
+         <link rel="stylesheet" href="css/reset.css">
     </head>
     <body id="body">
-        <header>
-        </header>
+        <header class="cabecalho">
+            <a href="index.html"><img src="images/Jujutsu Kaisen High Red Logo PNG Image.png" alt="Simbolo de Jujutsu"
+                    class="icone"></a>
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</li></a>
+                    <li><a href="select.html">Voltar</li></a>
+                </ul>
+            </nav>
+         </header>
         <main>
                
             
@@ -31,9 +45,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <input class="submit" type="submit" value="Enviar" onclick="mudarAction('Create')">
                 </form>
                 <br>
-                <form action="/crudjjk" method="POST">
-                   <input class="submit" type="submit" value="Voltar">
-               </form>
             </section>
 
             <script>

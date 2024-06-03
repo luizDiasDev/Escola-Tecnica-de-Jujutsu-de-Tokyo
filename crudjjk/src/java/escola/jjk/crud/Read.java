@@ -48,15 +48,34 @@ public class Read extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Resultado Banco</title>");
-             out.println("<link rel='stylesheet' type='text/css' href='css/style_table.css'>");
+            out.println("<title>Escola Técnica de Jujutsu de Tokyo</title>");
+            out.println("<link rel='icon' type='image/x-icon' href='https://www.citypng.com/public/uploads/small/11660427676zv9kgcmolil5tpntxmnhtxkmqj5lp8d6ucssv4vgz4acpajk2vdm7oc4npwpjrnjx4u6czobealec1kmiocbedhdut9521g8zaoi.png'>");
+            out.println("<meta charset=\"UTF-8\">");
+            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style_menu.css\">");
+            out.println("<link rel=\"stylesheet\" href=\"css/responsivo.css\">");
+            out.println("<link rel=\"stylesheet\" href=\"css/variaveis.css\">");
+            out.println("<link rel=\"stylesheet\" href=\"css/reset.css\">");
+            out.println("<link rel=\"stylesheet\" href=\"css/style_table.css\">");
             out.println("</head>");
-            out.println("<body id='body'>");
+            out.println("<body id=\"body\">");
+            out.println("<header class=\"cabecalho\">");
+            out.println("<a href=\"index.html\"><img src=\"images/Jujutsu Kaisen High Red Logo PNG Image.png\" alt=\"Simbolo de Jujutsu\" class=\"icone\"></a>");
+            out.println("<nav>");
+            out.println("<ul class=\"menu\">");
+            out.println("<li><a href=\"index.html\">Home</li></a>");
+            out.println("<li><a href=\"select.html\">Voltar</li></a>");
+            out.println("</ul>");
+            out.println("</nav>");
+            out.println("</header>");
+            out.println("<main>");
+
             //out.println("<h1>Resultado Banco</h1>");
             //visualização dos registros do BD TODOS Em forma de tabela
-            out.println("<section id='container'>");
+            out.println("<section id='container'>"); 
+            out.println("<h2>Dados dos Feiticeiros</h2>");
             out.println("<table cellspacing='0'>");
-            out.println("<tr><th>RGF</th><th>Nome</th><th>Grau</th><th>Técnica Inata</th><th>Ano Escola</th><th>Excluir</th><th>Editar</th></tr>");
+            out.println("<tr><th>RGF</th><th>Nome</th><th>Grau</th><th>Técnica Inata</th><th>Ano Escola</th></tr>");
             for(Feiticeiro f : feiticeiroDAO.read()){
                 out.println("<tr>");
                 out.println("<td>" + f.getRgf() + "</td>");
@@ -64,12 +83,9 @@ public class Read extends HttpServlet {
                 out.println("<td>" + f.getGrau() + "</td>");
                 out.println("<td>" + f.getTecnica_inata() + "</td>");
                 out.println("<td>" + f.getPeriodo_escolar() + "</td>");
-                out.println("<td><a href='Delete'><img src='../imagens/can.png' alt='exe'id='ex'></a></td>");
-                out.println("<td><a href='Update'><img src='../imagens/pencil.png' alt='alte' id='alt'></a></td>");
                 out.println("</tr>");
             }
             out.println("</table>");
-            out.println("<br><a href='/crudjjk'><button>Voltar</button></a>");
             out.println("</section>");
             out.println("</body>");
             out.println("</html>");

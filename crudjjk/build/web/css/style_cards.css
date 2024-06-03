@@ -3,12 +3,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'Poppins', sans-serif;
+   overflow: hidden;
 }
+
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 999;
+    position: relative;
+}
+
+.cabecalho .icone{
+    width: 80px;
+}
+
+.cabecalho nav li a{
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 45px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.cabecalho .menu{
+    display: flex;
+    height: 100%;
+    gap: 15px;
+    align-items: center;
+}
+
+.cabecalho nav li a:hover{
+    background-color: blueviolet;
+}
+
+
+
+
+
+
+
+
 html, body{
     background-color: #242423;
 }
-img{
+.content-all img{
     width: 300px; 
     height: 250px
 }
@@ -19,9 +62,8 @@ img{
     background-size: 150px;
     background-repeat: repeat;
     z-index: 0;
-    height: 100vh;
+    height: 120vh;
     flex: 1;
-    display: flex;
     flex-direction: column;
 }
 .cards{

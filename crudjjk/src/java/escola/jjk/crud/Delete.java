@@ -45,7 +45,7 @@ public class Delete extends HttpServlet {
         feiticeiroDAO.delete(feiticeiro);
         
         //Envia para pagina no lado do cliente
-        response.sendRedirect("/crudjjk");
+        response.sendRedirect("/crudjjk/select.html");
         
         
         
